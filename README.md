@@ -1,11 +1,26 @@
 # Tweejump
 
+Notes on integrating HelpshiftSDK
+==================================
+
+1. Open ***tweejump.xcodeproj*** in XCode, navigate to ***tweejump*** and click on AppDelegate.m
+
+2. Initialize Helpshift library by calling the method
+
+   ```
+   	[Helpshift installForAppID:@"<YOUR_APP_ID>"  domainName:@"<YOUR_COMPANY>.helpshift.com" apiKey:@"<YOUR_API_KEY>"];
+   ```
+   inside ***application:didFinishLaunchingWithOptions:*** method (ideally at the top)
+   for more information [refer doc](http://www.helpshift.com/docs/howto/ios/v2.x/#authentication)
+
+3. Refer ***supportCallback:*** method in tweejump/Classes/Game.m to show support screen, for more information [refer doc](http://www.helpshift.com/docs/howto/ios/v2.x/#decomposition)
+
 ![Tweejump](http://iplayful.com/tweejump/tweejump.jpg)
 
 Jump on platforms, collect coins on the way, and get highest score.
 
 * [Tweejump on the App Store][11] (Free)
-* [Tweejump video on YouTube][12] 
+* [Tweejump video on YouTube][12]
 
 Powered by [Cocos2D][13] framework.
 
