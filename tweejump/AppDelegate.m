@@ -13,6 +13,8 @@
 #import "RootViewController.h"
 #import "Game.h"
 
+#import "Helpshift.h"
+
 @implementation AppDelegate
 
 @synthesize window;
@@ -106,7 +108,10 @@
 	[CCTexture2D setDefaultAlphaPixelFormat:kCCTexture2DPixelFormat_RGBA8888];
 
 	
-	// Removes the startup flicker
+    //Helpshift::Initialize Helpshift by calling the installForAppID:domainName:apiKey: method inside application:didFinishLaunchingWithOptions: method [http://www.helpshift.com/docs/howto/ios/v2.x/#authentication]
+    //[Helpshift installForAppID:@"<YOUR_APP_ID>"  domainName:@"<YOUR_COMPANY>.helpshift.com" apiKey:@"<YOUR_API_KEY>"];
+    
+    // Removes the startup flicker
 	[self removeStartupFlicker];
 	
 	// Run the intro Scene
